@@ -19,20 +19,19 @@
 <script>
     pannellum.viewer('panorama', {   
         "default": {
-            "firstScene": "inicial",
-            "author": "Matthew Petroff",
+            "firstScene": "inicial",            
             "sceneFadeDuration": 1000
         },
     
         "scenes": {
             "inicial": {
-                "title": "Mason Circle",
+                "title": "Benvinguda",
                 "hfov": 110,
                 "pitch": 0,
                 "yaw": 117,
                 "type": "equirectangular",
                 "autoLoad": true,
-                "panorama": "/img/2.jpg",
+                "panorama": "./img/2.jpg",
                 "hotSpots": [
                     {
                         "pitch": 0,
@@ -49,13 +48,13 @@
                 "hfov": 110,
                 "yaw": 5,
                 "type": "equirectangular",
-                "panorama": "/img/5.jpg",
+                "panorama": "./img/5.jpg",
                 "hotSpots": [
                     {
                         "pitch": 0,
                         "yaw": 90,
                         "type": "scene",
-                        "text": "Entrada",
+                        "text": "Benvinguda",
                         "sceneId": "inicial",
                         "targetYaw": -23,
                         "targetPitch": 2
@@ -64,7 +63,7 @@
                         "pitch": 0,
                         "yaw": 180,
                         "type": "scene",
-                        "text": "Final vagó",
+                        "text": "Final del vagó",
                         "sceneId": "segona",
                         "targetYaw": -23,
                         "targetPitch": 2
@@ -73,11 +72,11 @@
             },
     
     "segona": {
-        "title": "Spring House or Dairy",
+        "title": "Final del vagó",
         "hfov": 110,
         "yaw": 5,
         "type": "equirectangular",
-        "panorama": "/img/7.jpg",
+        "panorama": "./img/7.jpg",
         "hotSpots": [
             {
                 "pitch": 0,
