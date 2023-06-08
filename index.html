@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prova Pannellum</title>
+    <title>Tour Vagó de la Ciència</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
     <style>
@@ -17,39 +17,82 @@
 
 <div id="panorama"></div>
 <script>
-pannellum.viewer('panorama', {
-    "type": "equirectangular",
-    "panorama": "https://images.unsplash.com/photo-1625015531264-43c3fce8c792?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1760&q=80",
-    /*
-     * Uncomment the next line to print the coordinates of mouse clicks
-     * to the browser's developer console, which makes it much easier
-     * to figure out where to place hot spots. Always remove it when
-     * finished, though.
-     */
-    //"hotSpotDebug": true,
-    "hotSpots": [
-        {
-            "pitch": 14.1,
-            "yaw": 1.5,
-            "type": "info",
-            "text": "Baltimore Museum of Art",
-            "URL": "https://artbma.org/"
+    pannellum.viewer('panorama', {   
+        "default": {
+            "firstScene": "inicial",
+            "author": "Matthew Petroff",
+            "sceneFadeDuration": 1000
         },
-        {
-            "pitch": -9.4,
-            "yaw": 222.6,
-            "type": "info",
-            "text": "Art Museum Drive"
-        },
-        {
-            "pitch": -0.9,
-            "yaw": 144.4,
-            "type": "info",
-            "text": "North Charles Street"
+    
+        "scenes": {
+            "inicial": {
+                "title": "Mason Circle",
+                "hfov": 110,
+                "pitch": 0,
+                "yaw": 117,
+                "type": "equirectangular",
+                "autoLoad": true,
+                "panorama": "/img/2.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": 132.9,
+                        "type": "scene",
+                        "text": "Meitat del vagó",
+                        "sceneId": "primera"
+                    }
+                ]
+            },
+    
+            "primera": {
+                "title": "Meitat del vagó",
+                "hfov": 110,
+                "yaw": 5,
+                "type": "equirectangular",
+                "panorama": "/img/5.jpg",
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw": 90,
+                        "type": "scene",
+                        "text": "Entrada",
+                        "sceneId": "inicial",
+                        "targetYaw": -23,
+                        "targetPitch": 2
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 180,
+                        "type": "scene",
+                        "text": "Final vagó",
+                        "sceneId": "segona",
+                        "targetYaw": -23,
+                        "targetPitch": 2
+                    }
+                ]
+            },
+    
+    "segona": {
+        "title": "Spring House or Dairy",
+        "hfov": 110,
+        "yaw": 5,
+        "type": "equirectangular",
+        "panorama": "/img/7.jpg",
+        "hotSpots": [
+            {
+                "pitch": 0,
+                "yaw": 37.1,
+                "type": "scene",
+                "text": "Centre vagó",
+                "sceneId": "primera",
+                "targetYaw": -23,
+                "targetPitch": 2
+            }
+        ]
+    }
         }
-    ]
-});
-</script>
+    });
+    </script>
 
 </body>
 </html>
