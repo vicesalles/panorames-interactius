@@ -26,7 +26,7 @@
         "scenes": {
             "inicial": {
                 "title": "Benvinguda",
-                "hfov": 100,
+                "hfov": 135,
                 "pitch": 0,
                 "yaw": 0,
                 "type": "equirectangular",
@@ -35,7 +35,7 @@
                 "hotSpots": [
                     {
                         "pitch": 0,
-                        "yaw": 350,
+                        "yaw": 310,
                         "type": "scene",
                         "text": "Meitat del vagó",
                         "sceneId": "primera"
@@ -45,14 +45,14 @@
     
             "primera": {
                 "title": "Meitat del vagó",
-                "hfov": 100,
+                "hfov": 135,
                 "yaw": 0,
                 "type": "equirectangular",
                 "panorama": "./img/5.jpg",
                 "hotSpots": [
                     {
                         "pitch": 0,
-                        "yaw": 360,
+                        "yaw": 5,
                         "type": "scene",
                         "text": "Benvinguda",
                         "sceneId": "inicial",
@@ -61,11 +61,11 @@
                     },
                     {
                         "pitch": 0,
-                        "yaw": 180,
+                        "yaw": 270,
                         "type": "scene",
                         "text": "Final del vagó",
                         "sceneId": "segona",
-                        "targetYaw": 0,
+                        "targetYaw": 270,
                         "targetPitch": 0
                     }
                 ]
@@ -73,19 +73,19 @@
     
     "segona": {
         "title": "Final del vagó",
-        "hfov": 100,
+        "hfov": 135,
         "yaw": 0,
         "type": "equirectangular",
         "panorama": "./img/2.jpg",
         "hotSpots": [
             {
                 "pitch": 0,
-                "yaw": 37.1,
+                "yaw": 180,
                 "type": "scene",
                 "text": "Centre vagó",
                 "sceneId": "primera",
-                "targetYaw": -23,
-                "targetPitch": 2
+                "targetYaw": 0,
+                "targetPitch": 0
             }
         ]
     }
