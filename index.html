@@ -1,99 +1,114 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour Vagó de la Ciència</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
     <style>
-    #panorama {
-        width: 600px;
-        height: 400px;
-    }
+        #panorama {
+            width: 600px;
+            height: 400px;
+        }
     </style>
 </head>
+
 <body>
 
-<div id="panorama"></div>
-<script>
-    pannellum.viewer('panorama', {   
-        "default": {
-            "firstScene": "inicial",            
-            "sceneFadeDuration": 1000
-        },
-    
-        "scenes": {
-            "inicial": {
-                "title": "Benvinguda",
-                "hfov": 135,
-                "pitch": 0,
-                "yaw": 350,
-                "type": "equirectangular",
-                "autoLoad": true,
-                "panorama": "./img/7.jpg",
-                "hotSpots": [
-                    {
-                        "pitch": -30,
-                        "yaw": 305,
-                        "type": "scene",
-                        "text": "Meitat del vagó",
-                        "sceneId": "primera",
-                        "targetYaw": 225,
-                        "targetPitch": 0
-                    }
-                ]
+    <div id="panorama"></div>
+    <script>
+        pannellum.viewer('panorama', {
+            "default": {
+                "firstScene": "inicial",
+                "sceneFadeDuration": 1000
             },
-    
-            "primera": {
-                "title": "Meitat del vagó",
-                "hfov": 135,
-                "yaw": 0,
-                "type": "equirectangular",
-                "panorama": "./img/5.jpg",
-                "hotSpots": [
-                    {
-                        "pitch": 0,
-                        "yaw": 10,
-                        "type": "scene",
-                        "text": "Benvinguda",
-                        "sceneId": "inicial",
-                        "targetYaw": 0,
-                        "targetPitch": 0
-                    },
-                    {
-                        "pitch": 0,
-                        "yaw": 225,
-                        "type": "scene",
-                        "text": "Final del vagó",
-                        "sceneId": "segona",
-                        "targetYaw": 0,
-                        "targetPitch": 0
-                    }
-                ]
-            },
-    
-    "segona": {
-        "title": "Final del vagó",
-        "hfov": 135,
-        "yaw": 0,
-        "type": "equirectangular",
-        "panorama": "./img/2.jpg",
-        "hotSpots": [
-            {
-                "pitch": -35,
-                "yaw": 240,
-                "type": "scene",
-                "text": "Centre vagó",
-                "sceneId": "primera",
-                "targetYaw": 0,
-                "targetPitch": 0
+
+            "scenes": {
+                "inicial": {
+                    "title": "Benvinguda",
+                    "hfov": 135,
+                    "pitch": 0,
+                    "yaw": 350,
+                    "type": "equirectangular",
+                    "autoLoad": true,
+                    "panorama": "./img/7.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -30,
+                            "yaw": 305,
+                            "type": "scene",
+                            "text": "Meitat del vagó",
+                            "sceneId": "primera",
+                            "targetYaw": 225,
+                            "targetPitch": 0
+                        }
+                    ]
+                },
+
+                "primera": {
+                    "title": "Meitat del vagó",
+                    "hfov": 135,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "./img/5.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": 0,
+                            "yaw": 10,
+                            "type": "scene",
+                            "text": "Benvinguda",
+                            "sceneId": "inicial",
+                            "targetYaw": 0,
+                            "targetPitch": 0
+                        },
+                        {
+                            "pitch": 70,
+                            "yaw": 1,
+                            "type": "info",
+                            "text": "Exemple de hotspot informatiu sense enllaç extern"
+                        }, {
+                            "pitch": 270,
+                            "yaw": 1.5,
+                            "type": "info",
+                            "text": "Exemple de hotspot informatiu amb enllaç extern i text innusualment llarg per a un hostpot. Això ha de prendre forma de paràgraf i així veurem què passa quan l'etiqueta del hostpot ha d'incloure una caixa de text amb diverses línies.",
+                            "URL": "https://uab.cat/"
+                        },
+                        {
+                            "pitch": 0,
+                            "yaw": 225,
+                            "type": "scene",
+                            "text": "Final del vagó",
+                            "sceneId": "segona",
+                            "targetYaw": 0,
+                            "targetPitch": 0
+                        }
+                    ]
+                },
+
+                "segona": {
+                    "title": "Final del vagó",
+                    "hfov": 135,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "./img/2.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -35,
+                            "yaw": 240,
+                            "type": "scene",
+                            "text": "Centre vagó",
+                            "sceneId": "primera",
+                            "targetYaw": 0,
+                            "targetPitch": 0
+                        }
+                    ]
+                }
             }
-        ]
-    }
-        }
-    });
+        });
     </script>
 
 </body>
+
 </html>
